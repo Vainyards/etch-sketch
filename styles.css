@@ -3,26 +3,29 @@
     font-family: monospace;
   }
   
-  /* Style the grid container */
+  
   .grid-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5px; /* Adjust padding as needed */
-    border: 2px solid black; /* Optional border */
-    position: relative; /* Needed for absolute positioning of trail */
-    overflow: hidden; /* Hide the trail outside the grid */
+    padding: none;
+    border: 2px solid #222; /
+    position: relative; 
+    overflow: hidden; 
     margin-top: 16px;
+    
   }
   
-  /* Style the individual cells */
+
   .cell {
     width: calc(100% / var(--grid-size)); /* Each cell takes 1/nth of the width */
-    height: calc(100vw / var(--grid-size)); /* Make cells square, adjust based on aspect ratio preference */
+    height: calc(80vw / var(--grid-size)); /* Make cells square, adjust based on aspect ratio preference */
     background-color: lightgray;
-    border: 1px solid black; /* Optional border */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    position: relative; /* Needed for absolute positioning of trail */
+    border: 1px solid #222; 
+    transition: background-color 0.3s ease; 
+    position: relative; 
+    max-width: auto;
+    max-height: auto;
   }
 
 
