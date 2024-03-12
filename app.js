@@ -1,5 +1,4 @@
 let trailEnabled = false;
-let hoverColor = 'lightblue'; // Change to any color you like
 
 function createGrid() {
   const gridSize = document.getElementById('grid-size').value;
@@ -10,6 +9,9 @@ function createGrid() {
 
   // Set custom property for grid size
   document.documentElement.style.setProperty('--grid-size', gridSize);
+
+  // Generate a random color for hover effect
+  const hoverColor = getRandomColor();
 
   // Create the grid
   for (let i = 0; i < gridSize * gridSize; i++) {
@@ -37,12 +39,21 @@ function createGrid() {
       }
     });
 
-    /*cell.addEventListener('mouseleave', () => {
+    cell.addEventListener('mouseleave', () => {
       if (!trailEnabled) {
-        cell.style.backgroundColor = 'white';
+        cell.style.backgroundColor = 'color';
       }
-    });*/
+    });
   });
+}
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 // Initial grid creation

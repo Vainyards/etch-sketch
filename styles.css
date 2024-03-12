@@ -1,5 +1,6 @@
   * {
     background-color: lightgray;
+    font-family: monospace;
   }
   
   /* Style the grid container */
@@ -31,7 +32,7 @@
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.699);
   background: #111;
   cursor: pointer;
   position: relative;
@@ -40,6 +41,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  gap: 24px;
 }
 
 .button-85:before {
@@ -92,7 +94,15 @@
   left: 0;
   top: 0;
   border-radius: 10px;
+  gap: 24px;
 }
-  }
-
   
+
+input[type=number] {
+    font-size: 16px;
+    border-radius: 10px;
+    gap: 24px;
+    border-style: dotted;
+    background: #222;
+    color:rgba(255, 255, 255, 0.699) ;
+}
