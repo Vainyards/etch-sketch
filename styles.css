@@ -13,19 +13,19 @@
     position: relative; 
     overflow: hidden; 
     margin-top: 16px;
-    
+    max-width: 980px;
+    max-height: 600px;
   }
   
 
   .cell {
-    width: calc(100% / var(--grid-size)); /* Each cell takes 1/nth of the width */
+    width: calc(80% / var(--grid-size)); /* Each cell takes 1/nth of the width */
     height: calc(80vw / var(--grid-size)); /* Make cells square, adjust based on aspect ratio preference */
     background-color: lightgray;
     border: 1px solid #222; 
     transition: background-color 0.3s ease; 
     position: relative; 
-    max-width: auto;
-    max-height: auto;
+    
   }
 
 
